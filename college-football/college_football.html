@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>College Football</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+
+            max-width: 1000px;
+
+            margin: 50px auto;
+
+            padding: 0 20px;
+
+            background: #111827;
+
+            color: #f9fafb;
+        }
+
+
+        a {
+            color: #60a5fa;
+        }
+
+
+        .page-header {
+            margin-bottom: 30px;
+        }
+
+
+        .page-header h1 {
+            margin-bottom: 8px;
+        }
+
+
+        .subtitle {
+            color: #9ca3af;
+        }
+
+
+        .game-card {
+            display: block;
+
+            background: #1f2937;
+
+            padding: 18px 22px;
+
+            border-radius: 10px;
+
+            margin-bottom: 16px;
+
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        .game-card:hover {
+            background: #273449;
+        }
+
+
+        .game-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 20px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .game-header h2 {
+            margin: 0 0 5px 0;
+
+            font-size: 20px;
+        }
+
+
+        .game-date {
+            color: #9ca3af;
+
+            font-size: 13px;
+        }
+
+
+        .game-meta {
+            color: #9ca3af;
+
+            font-size: 13px;
+
+            white-space: nowrap;
+        }
+
+
+        .consensus-preview {
+            border-top: 1px solid #374151;
+        }
+
+
+        .summary-row {
+            display: grid;
+
+            grid-template-columns:
+                120px 1fr 60px;
+
+            gap: 12px;
+
+            padding: 9px 0;
+
+            border-bottom:
+                1px solid #374151;
+        }
+
+
+        .market-name {
+            color: #9ca3af;
+
+            font-size: 14px;
+        }
+
+
+        .bet-name {
+            font-weight: bold;
+        }
+
+
+        .support {
+            text-align: right;
+
+            font-weight: bold;
+
+            color: #86efac;
+        }
+
+
+        .no-bets,
+        .empty-state {
+            color: #9ca3af;
+
+            padding: 15px 0;
+        }
+
+
+        @media (
+            max-width: 600px
+        ) {
+
+            .game-header {
+                display: block;
+            }
+
+
+            .game-meta {
+                margin-top: 8px;
+            }
+
+
+            .summary-row {
+                grid-template-columns:
+                    90px 1fr 50px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <a href="/">
+        ← Home
+    </a>
+
+
+    <div class="page-header">
+
+        <h1>
+            College Football
+        </h1>
+
+        <div class="subtitle">
+            Analyst consensus by game and market.
+        </div>
+
+    </div>
+
+
+    <main>
+
+        {{GAME_CARDS}}
+
+    </main>
+
+</body>
+
+</html>
